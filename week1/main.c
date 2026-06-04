@@ -1,10 +1,14 @@
 #include "main.h"
 #include "tasks.h"
+#include "spsc_q.h"
+#include "mutex.h"
+#include "priority_sch.h"
 
-
+SPSCQueue task_queue;
 extern task_t tasks[MAX_TASKS];
 
 int main() {
+    queue_init(&task_queue);
     create_task(0, "Task A", 1);
     create_task(1, "Task B", 2);
     create_task(2, "Task C", 3);
