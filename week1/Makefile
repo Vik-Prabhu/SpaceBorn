@@ -5,7 +5,7 @@ DEPFLAGS := -MMD -MP
 
 # Output and target names
 OBJDIR := obj
-TARGET := main
+TARGET := $(OBJDIR)/main
 
 # Source files and derived object/dependency files
 SRCS := main.c tasks.c mutex.c priority_sch.c spsc_q.c
